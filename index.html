@@ -12,30 +12,37 @@
     <h1>Únete a Pirata Agency</h1>
     <p>Gana dinero transmitiendo en vivo desde casa</p>
 
-    <form id="recruitForm">
-      <input type="text" id="nombre" placeholder="Nombre completo" required>
-      <input type="number" id="edad" placeholder="Edad" required>
-      <input type="text" id="pais" placeholder="País" required>
-      <input type="text" id="telefono" placeholder="WhatsApp" required>
-      
-      <select id="fuente" required>
+    <form 
+      action="https://script.google.com/macros/s/AKfycbx8G8KvxxkOvP2FyCDBOAMr1kzUyGTgoaRUPTdePO8BBE2MwrwhOju9V0jAeqH0qBmq/exec"
+      method="POST"
+      target="hidden_iframe"
+      onsubmit="mostrarMensaje()"
+    >
+    
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+      <input type="number" name="edad" placeholder="Edad" required>
+      <input type="text" name="pais" placeholder="País" required>
+      <input type="text" name="telefono" placeholder="WhatsApp" required>
+    
+      <select name="fuente" required>
         <option value="">¿Dónde nos encontraste?</option>
         <option value="TikTok">TikTok</option>
         <option value="Facebook">Facebook</option>
         <option value="Instagram">Instagram</option>
         <option value="Otro">Otro</option>
       </select>
-
-      <select id="horas" required>
-        <option value="">¿Cuántas horas puedes transmitir al día?</option>
-        <option value="1">1 hora</option>
-        <option value="2-3">2-3 horas</option>
-        <option value="4+">4 o más horas</option>
+    
+      <select name="puntaje" required>
+        <option value="10">1 hora</option>
+        <option value="20">2-3 horas</option>
+        <option value="30">4 o más horas</option>
       </select>
-
+    
       <button type="submit">Postularme</button>
     </form>
-
+    
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+    
     <div id="mensaje"></div>
   </div>
 </div>
