@@ -23,14 +23,11 @@ form.addEventListener("submit", async (e) => {
 
   try {
     const response = await fetch("https://script.google.com/macros/s/AKfycbx8G8KvxxkOvP2FyCDBOAMr1kzUyGTgoaRUPTdePO8BBE2MwrwhOju9V0jAeqH0qBmq/exec", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-
-    const result = await response.json();
+    method: "POST",
+    body: new URLSearchParams(data)
+  });
+  
+  const result = await response.json();
 
     mensaje.innerHTML = "Postulación enviada ✔ ID: " + result.id;
     form.reset();
