@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pirata Agency | Reclutamiento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <h1>Únete a Pirata Agency</h1>
+    <p>Gana dinero transmitiendo en vivo desde casa</p>
+
+    <form id="recruitForm">
+      <input type="text" id="nombre" placeholder="Nombre completo" required>
+      <input type="number" id="edad" placeholder="Edad" required>
+      <input type="text" id="pais" placeholder="País" required>
+      <input type="text" id="telefono" placeholder="WhatsApp" required>
+      
+      <select id="fuente" required>
+        <option value="">¿Dónde nos encontraste?</option>
+        <option value="TikTok">TikTok</option>
+        <option value="Facebook">Facebook</option>
+        <option value="Instagram">Instagram</option>
+        <option value="Otro">Otro</option>
+      </select>
+
+      <select id="horas" required>
+        <option value="">¿Cuántas horas puedes transmitir al día?</option>
+        <option value="1">1 hora</option>
+        <option value="2-3">2-3 horas</option>
+        <option value="4+">4 o más horas</option>
+      </select>
+
+      <button type="submit">Postularme</button>
+    </form>
+
+    <div id="mensaje"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
