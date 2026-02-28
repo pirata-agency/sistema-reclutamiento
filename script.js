@@ -35,3 +35,9 @@ form.addEventListener("submit", async (e) => {
     console.error(error);
   }
 });
+
+
+function mostrarMensaje() {
+  document.getElementById("mensaje").innerHTML = 
+    "Postulación enviada correctamente ✔ Te contactaremos pronto.";
+}
